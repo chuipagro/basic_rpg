@@ -1,0 +1,57 @@
+# ----------------------------------------------------------------------
+# 1. Compilation
+# ----------------------------------------------------------------------
+build/
+bin/
+lib/
+
+cmake-build-debug/
+cmake-build-release/
+cmake-build-relwithdebinfo/
+cmake-build-minsizerel/
+
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+
+# cmake's generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+Makefile
+
+# ----------------------------------------------------------------------
+# 2. IDE
+# ----------------------------------------------------------------------
+# CLion / IntelliJ
+.idea/
+
+
+# ----------------------------------------------------------------------
+# 3. Dependencies
+# ----------------------------------------------------------------------
+_deps/
+vcpkg_installed/
+
+# ----------------------------------------------------------------------
+# 4. Assets && work files
+# ----------------------------------------------------------------------
+*.psd
+*.kra
+*.blend
+*.blend1
+
+# Temp files
+*.log
+*.tlog
+*.tmp
+*.bak
+valgrind.out
