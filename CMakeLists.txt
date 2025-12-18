@@ -11,8 +11,10 @@ add_compile_options(-Wall -Wextra -Wpedantic)
 
 set(SOURCES
         src/Main.cpp
-        test/Test.cpp
-
+        src/OutGameMenu/OutGamemenu.cpp
+        src/OutGameMenu/OutGamemenu.h
+        src/Map/Map.cpp
+        src/Map/Map.h
 )
 
 find_package(SFML 2.5 COMPONENTS graphics window system audio REQUIRED)
@@ -33,8 +35,9 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-add_executable(MyRPG_Tests test/Tests.cpp)
-target_link_libraries(MyRPG_Tests GTest::gtest_main sfml-system) # + tes autres libs
+add_executable(MyRPG_Tests
+        test/Test.cpp)
+target_link_libraries(MyRPG_Tests GTest::gtest_main sfml-system)
 
 include(GoogleTest)
 gtest_discover_tests(MyRPG_Tests)
